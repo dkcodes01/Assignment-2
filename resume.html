@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <style> 
+
+        .contactbar
+        {
+            max-width: auto ;
+            display: flex;
+            gap: 30px;
+            justify-content : center;
+        }
+        h1{
+            text-align: center;
+            color: rgb(23, 24, 94);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        h3{
+            //border-bottom: 2px solid black;
+            color: rgb(23, 24, 94);
+        }
+        table{
+            border-collapse: collapse  ;
+        }
+        tr,td,th{
+            padding: 10px;
+        }
+        img{
+            border-radius: 100px;
+            border:solid 2px;
+        }
+        .profile
+        {
+            justify-content: center;
+        }
+        button{
+            border-radius: 5px;
+            background-color:  rgb(23, 24, 94);
+            color: white;
+            padding: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+
+        }
+        .dark
+        {
+            background-color: rgba(40, 39, 39, 0.741);
+            color: white;
+        }
+        .light
+        {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body id="bdy">
+    <center>
+    <div class = "profile">
+    <img id ="profile" src="profile img.jpeg" style="height: 100 px ;width:100px;" alt ="profile image"><br><br>
+    <button id="show">Hide Profile</button>
+    <button id="toggle">Dark</button>
+    <button id="count">Count</button>
+    <lable id="lable"></lable>
+    <h1>DINESHKUMAR V</h1>
+    </div>
+    </center>
+    <div class="contactbar">
+    <img src="img 3.jpg" style="height: 20px;width: 20px;">
+    <a href="tel:9025012768">9025012768</a>
+    <img src="img 5.jpg" style="height: 20px;width: 20px;">
+    <a href="https://mail.google.com">dinesh28dk3@gmail.com</a>
+    <img src="img 4.jpg" style="height: 20px;width: 20px;">
+    <a href="https://www.linkedin.com/in/dineshkumar-v-06b61128b/">Linkeden</a>
+    </div>
+    <br>
+
+<fieldset>
+<legend><h3>SUMMARY</h3></legend>
+    <P>Computer Science Engineering student with a strong foundation in programming, problem
+solving, and software development. Quick learner with good analytical and communication
+skills, eager to apply technical knowledge and contribute to organizational growth</P>
+</fieldset>
+<fieldset>
+<legend><h3>TECHNICAL SKILLS</h3></legend>
+<ul>
+    <li>programming language: Python, java</li>
+    <li>Web Technologies: CSS, Javascript</li>
+    <li>Tools: VScode, Figma</li>
+</ul>
+</fieldset>
+<fieldset>
+<legend><h3>PROJECTS</h3></legend>
+<h5>Smart Based Attendance Management System | 2026</h5>
+<p>Developed an Attendance Management System to efficiently record, manage, and track student
+attendance.Implemented QR code-based attendance with location verification (GPS) and time-stamped
+check-ins to ensure secure and authentic attendance records.</p>
+<h5>Solar Radiation and Power Estimation Using Machine Learning | 2026</h5>
+<p>Built a machine learning model to estimate solar radiation and predict solar power generation
+using weather and environmental data.Performed data preprocessing, exploratory data analysis, and model evaluation using Python and
+Scikit-learn.</p>
+</fieldset>
+<fieldset>
+<legend><h3>CERTIFICATES</h3></legend>
+<ul>
+    <li>NPTEL-Programming in java</li>
+    <li>Infosys-Frontend web development</li>
+    <li>Mepro person-level 10</li>
+    <li>AWS Academy Graduate - Cloud Foundations</li>
+</ul>
+</fieldset>
+<fieldset>
+<legend><h3>PROFESSIONAL EXPERIENCE</h3></legend>
+<h5>WordPress & Figma Intern – Neurospark 1.0 , DetQel  | June - July (2025)</h5>
+<UL>
+    <li>Designed website UI layouts and prototypes using Figma.</li>
+    <li>Worked on WordPress basics, page design, and content layout.</li>
+</UL>
+<h5>Software Development Intern – Chennai Port Authority | May - June (2026)</h5>
+<ul>
+    <li>Contributed to the development of a Ticketing Tool for managing support requests and issue
+tracking.</li>
+    <li>Assisted in software development, testing, and application maintenance</li>
+</ul>
+</fieldset>
+<fieldset>
+<legend><h3>EDUCATION</h3></legend>
+<table border>
+    <tr>
+        <th>Qualification</th>
+        <th>Institution</th>
+        <th>Percentage</th>
+    </tr>
+    <tr>
+        <td>B.E CSE</td>
+        <td>SA Engineering College</td>
+        <td>81.9</td>
+    </tr>
+    <tr>
+        <td>12 th</td>
+        <td>St.joseph school</td>
+        <td>88.16</td>
+    </tr>
+    <tr>
+        <td>10 th</td>
+        <td>St.joseph school</td>
+        <td>100</td>
+    </tr>
+</table>
+</fieldset>
+<script>
+    var Boolean = true;
+    const profile = document.getElementById('profile');
+    const show = document.getElementById('show')
+    show.addEventListener('click',function(){
+        Boolean = !Boolean;
+        profile.style.display=`${Boolean ? " block" : "none"}`;
+        show.textContent = `${Boolean ? " Hide profile" : "Show profile"}`;
+    });
+    var darkmode=false;
+    const toggle= document.getElementById('toggle');
+    const bdy=document.getElementById('bdy');
+    toggle.addEventListener('click',function(){
+        darkmode = !darkmode;
+        bdy.className=`${darkmode ? "dark" : "light"}`;
+        toggle.textContent = `${darkmode ? " Light" : "Dark"}`;
+    });
+    var c = 0;
+    const count= document.getElementById('count');
+    const lable=document.getElementById('lable');
+    count.addEventListener('click',function(){
+        c = c+1;
+        lable.textContent = `Count :${c}`;
+    });
+</script>
+</body>
+</html> 
